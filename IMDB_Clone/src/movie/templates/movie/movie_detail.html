@@ -16,7 +16,7 @@
                     <ul>
                         <li>{{object}}</li>
                         <li>{{object.description}}</li>
-                        <li><a href="cast.html">Gary Oldman</a>, <a href="cast.html">Asa Butterfield</a></li>
+                        <li><a href="">{{object.cast}}</a></li>
                         <li>{{object.views_count}}</li>
                     </ul>
                 </section>
@@ -24,16 +24,25 @@
                     <h3>Links</h3>
                     <ul class="dlinks">
                         <li><a>Download</a></li>
-                        <li><a href="#">Link1</a></li>
-                        <li><a href="#">Link2</a></li>
-                        <li><a href="#">Link3</a></li>
+
+                            {% for link in links %}
+                                {% if link.type == 'D' %}
+                                    <li><a href="{{link.link}}">link{{forloop.counter}}</a></li>
+                                {% endif %}
+                            {% endfor %}
+
                     </ul>
                     <ul class="wlinks">
                         <li><a>Watch</a></li>
-                        <li><a href="#">Link1</a></li>
-                        <li><a href="#">Link2</a></li>
-                        <li><a href="#">Link3</a></li>
+
+                            {% for link in links %}
+                                {% if link.type == 'W' %}
+                                    <li><a href="{{link.link}}">link{{forloop.counter}}</a></li>
+                                {% endif %}
+                            {% endfor %}
+
                     </ul>
+
                 </section>
 
                 <section class="related">
@@ -65,9 +74,6 @@
 
                 </section>
 
-                <section class="comments">
-                    <h3>Comments</h3>
-                </section>
             </div>
         </main>
 
