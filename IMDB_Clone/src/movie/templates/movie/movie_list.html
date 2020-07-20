@@ -5,7 +5,10 @@
             <h3>{{movie_category|title}} Movies</h3
         {% endif %}
 
-        <h3>{{movie_category}}</h3>
+        {% if movie_language %}
+            <h3>{{movie_language|title}} Movies</h3
+        {% endif %}
+
         <div class="movies">
             {% for movie in object_list %}
                 <div class="mov">
@@ -14,7 +17,7 @@
                         <h2 class="movietitle">{{ movie.title }}</h2>
                     </a>
                 </div>
-                {% empty %}
+            {% empty %}
                 <h3>There Are No Movies In This Category</h3
             {% endfor %}
 
