@@ -38,7 +38,7 @@ class MovieDetail(DetailView):
         context = super(MovieDetail, self).get_context_data(**kwargs)
         context["links"] = MovieLinks.objects.filter(movie=self.get_object())
         context['related_movies'] = Movie.objects.filter(category=self.get_object().category)
-        print(context)
+        #print(context)
         return context
 
 
@@ -90,4 +90,4 @@ class MovieYear(YearArchiveView):
     make_object_list = True
     allow_future = True
 
-    print(queryset)
+    #print(queryset)

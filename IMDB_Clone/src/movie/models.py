@@ -8,11 +8,27 @@ CATEGORY_CHOICES = (
     ("drama", "DRAMA"),
     ("comedy", "COMEDY"),
     ("romance", "ROMANCE"),
+    ("comedy", "COMEDY"),
+    ("sci-fi", "SCI-FI"),
+    ("horror", "HORROR"),
+    ("thriller", "THRILLER"),
+    ("mystery", "MYSTERY"),
+    ("crime", "CRIME"),
+    ("animation", "ANIMATION"),
+    ("adventure", "ADVENTURE"),
+    ("fantasy", "FANTASY"),
+    ("superhero", "SUPERHERO"),
 )
 
 LANGUAGES_CHOICES = (
     ("english", "ENGLISH"),
     ("german", "GERMAN"),
+    ("hindi", "HINDI"),
+    ("spanish", "SPANISH"),
+    ("bengali", "BENGALI"),
+    ("telugu", "TELUGU"),
+    ("korean", "KOREAN"),
+    ("tamil", "TAMIL"),
 )
 
 STATUS_CHOICES = (

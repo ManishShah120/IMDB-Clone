@@ -1,0 +1,44 @@
+- movie :
+	- title
+	- description
+	- tags
+	- views count
+	- image
+	- category
+	- language
+	- year of production
+	- status [recently added - most watched - top rated]
+	- watch links
+
+	- cast
+	- trailer_link
+
+	- related movies
+
+- search
+
+- no movies in year
+- slug
+- movie trailer
+- slider
+- related movies
+- tags
+- home
+
+
+
+............................
+Codes to set up this project
+````````````````````````````
+1434  virtualenv -p python3.8 IMDB_Clone
+1436  cd IMDB_Clone/
+1437  source bin/activate
+1439  mkdir src
+1440  pip install django
+1443  cd src
+1445  django-admin startproject Imdb .
+1447  python manage.py runserver
+1448  python manage.py migrate
+1449  python manage.py runserver
+1450  python manage.py createsuperuser
+1451  python manage.py runserver
